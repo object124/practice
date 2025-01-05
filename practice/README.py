@@ -13,7 +13,6 @@
 #        print()
 
 
-
 #st1 = [1,2,3,4,5,6,7,8]
 #st2 = st1[2:5]
 #print(st2)
@@ -55,4 +54,9 @@
 #    result = result + i
 #print(result)
 
-
+a = 20
+print (a)
+b= 10
+print (b)
+sum = a + b
+print = (sum) 
