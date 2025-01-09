@@ -1,8 +1,11 @@
 class Grade:
-    def init(self,kor,eng,math):
+    def __init__(self,kor,eng,math): 
         self.kor = kor
         self.eng = eng
         self.math = math
+
+    def set_eng(self,eng):
+        self.eng = eng
 
     def get_total(self):
         return self.kor + self.eng + self.math
@@ -28,17 +31,23 @@ class Grade:
 
         return grade
 
-
 def main():
-    kor = int(input("국어 점수 입력 : "))
-    eng = int(input("영어 점수 입력 : "))
-    math = int(input("수학 점수 입력 : "))
+    while True:
+        kor = int(input("국어 점수 입력 : "))
+        eng = int(input("영어 점수 입력 : "))
+        math = int(input("수학 점수 입력 : "))
 
-    grade = Grade(kor,eng,math)
+        grade = Grade(kor,eng,math) # Assign the instance to a variable
 
-    print("총점 : ",grade.get_total())
-    print("평균 : ",grade.get_avg())
-    print("학점 : ",grade.get_grade())
+        print("총점 : ",grade.get_total())
+        print("평균 : ",grade.get_avg())
+        print("학점 : ",grade.get_grade())
 
+        continue_yn = input("계속 하시겠습니까? (y/n) : ")
+        
+        if continue_yn.upper() != 'Y' and continue_yn.upper() != 'YES' :
+            break
 
- main()
+    print("프로그램 종료")
+
+main()
